@@ -1,0 +1,41 @@
+<html>
+  <style>
+    body{
+      font-size: 15pt;
+      font-family: arial;
+    }
+  </style>
+
+
+<body background="{{ url_for('static', filename = 'back1.jpg') }}"><br><br>
+  <center><h1>Bars</h1></center>
+
+
+<center>
+<table border="1">
+  <tr>
+    <th>name</th>
+    <th>rating</th>
+    <th>value</th>
+    <th>address</th>
+
+
+
+
+  </tr>
+  {% for n in data %}
+  <tr>
+   <th>{{n[0]}}</th>
+  <th>{{n[1]}}</th>
+  <th>{{n[2]}}</th>
+  <th>{{n[3]}}</th>
+
+
+
+       {% endfor %}
+  </tr>
+</table></center>
+
+
+
+</body>
